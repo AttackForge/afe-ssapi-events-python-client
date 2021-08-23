@@ -1,5 +1,5 @@
 # AttackForge Enterprise Self-Service Events API
-## Python Client v0.0.1
+## Python Client v1.0.0
 
   * [Git](https://github.com/AttackForge/afe-ssapi-events-python-client.git)
   * [Support](https://support.attackforge.com/attackforge-enterprise/modules/self-service-events-api/getting-started)
