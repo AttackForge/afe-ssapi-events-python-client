@@ -60,7 +60,7 @@ async def connect():
     ssl_context = ssl.create_default_context()
 
     # Uncomment the following if using self-signed certificates
-    #ssl_context = ssl.create_default_context(purpose=ssl.Purpose.CLIENT_AUTH)
+    #ssl_context = ssl.create_default_context(purpose=ssl.Purpose.SERVER_AUTH)
 
     async with websockets.connect(
         uri, ping_interval=None, ping_timeout=None, ssl=ssl_context, additional_headers=headers
