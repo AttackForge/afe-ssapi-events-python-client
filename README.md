@@ -40,20 +40,20 @@ In order to access the Self-Service Events API, you must meet the following cond
 
 Your key is static and does not expire. You can request a new key at any time within the application.
 
-All requests to the Events API must be made over HTTPS. Calls made over plain HTTP will fail. 
+All requests to the Events API must be made over HTTPS. Calls made over plain HTTP will fail.
 You must authenticate all requests.
 
 ## Accessing the Events API
 
-Access to the Events API, including scope of data available, is restricted to the users' data within 
+Access to the Events API, including scope of data available, is restricted to the users' data within
 the application. This means that an Administrators' API key cannot access all events or data in the system.
 
-By default, every user in the system does not have access to any of the Events. 
-Access to the Events API must be provided explicitly by an Administrator, and is controlled on an 
+By default, every user in the system does not have access to any of the Events.
+Access to the Events API must be provided explicitly by an Administrator, and is controlled on an
 individual event basis.
 
-A user can see their access to the Events API by viewing the My Events section within the SSAPI module 
-in the application. An Administrator can provide access to the Events API for a user by accessing 
+A user can see their access to the Events API by viewing the My Events section within the SSAPI module
+in the application. An Administrator can provide access to the Events API for a user by accessing
 the Users module.
 
 ## Setting up your client
@@ -75,7 +75,22 @@ Using a terminal, navigate to the directory when you downloaded the client in St
 
 	$ cd ~/Documents/afe-ssapi-events-python-client
 
-Using PIP, install dependancies from main.py.
+#### Optional: Set up a Python virtual environment
+It is recommended to use a virtual environment to isolate the project's dependencies from your system Python packages.
+
+	$ python3 -m venv .venv
+	$ source .venv/bin/activate
+
+On Windows, activate the virtual environment with:
+
+	$ .venv\Scripts\activate
+
+#### Install dependencies
+Using PIP, install dependancies.
+
+	$ pip3 install -r requirements.txt
+
+Alternatively, you can install the dependency directly:
 
 	$ pip3 install websockets
 
@@ -92,7 +107,7 @@ If your client is successfully subscribed to the events, you should see similar 
 
 	Subscribed to the following events: [ 'vulnerability-created', 'vulnerability-updated' ]
 
-Your client is now working and you will see new events output to the terminal as they are 
+Your client is now working and you will see new events output to the terminal as they are
 pushed from AttackForge.
 
 You can now work on your integration code to start actioning these events.
